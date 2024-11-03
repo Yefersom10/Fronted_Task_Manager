@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/dashboard">Task Manager</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/dashboard"> Inicio </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tarea/list">Listas de Tareas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Graficos</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown link
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<h2>Crear Tarea</h2>
+<div class="container">
+    <form #form="ngForm" (ngSubmit)="addTarea()">
+        <div class="mb-3">
+            <label for="namTarea" class="form-label">Nombre de la tarea</label>
+            <input [(ngModel)]="namTarea" type="text" class="form-control" id="namTarea" name="namTarea" required>
+        </div>
+        <div class="mb-3">
+            <label for="descripcion" class="form-label">Describa la tarea</label>
+            <input [(ngModel)]="descripcion" type="text" class="form-control" id="descripcion" name="descripcion" required>
+        </div>
+        <div class="mb-3">
+            <label for="fecha_creacion" class="form-label">Fecha de creación</label>
+            <input [(ngModel)]="fecha_creacion" type="date" class="form-control" id="fecha_creacion" name="fecha_creacion" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Crear una nueva tarea</button>
+
+        <!-- Mostrar mensaje de error si existe -->
+        <div *ngIf="mensaje" class="alert alert-danger" role="alert">
+            {{ mensaje }}
+          </div>
+    </form>
+</div>

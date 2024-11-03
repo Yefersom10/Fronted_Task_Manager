@@ -1,0 +1,20 @@
+.colorFooter{
+    background-color: cornflowerblue;
+}
+
+.footer{
+    bottom: 0px;
+    height: 60px;
+    width: 100%;
+}
+
+.bajar{
+    position: static;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: cornflowerblue; /* Ajusta según tu diseño */
+    color: white;
+  }

@@ -1,0 +1,119 @@
+/* Barra de navegacion */
+  /* Reset de márgenes y padding */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos generales del body */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Estilos para la barra de navegación */
+  .navbar {
+    background-color: #f8f9fa; /* Color de fondo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+  
+  /* Contenedor de la barra de navegación */
+  .container-fluid {
+    max-width: 1200px; /* Ancho máximo */
+    margin: 0 auto; /* Centrar */
+    display: flex;
+    justify-content: space-between; /* Espacio entre el logo y el menú */
+    align-items: center; /* Centrar verticalmente */
+  }
+  
+  /* Logo de la barra de navegación */
+  .navbar-brand {
+    font-size: 1.5rem; /* Tamaño de fuente del logo */
+    font-weight: bold; /* Negrita */
+    color: #333; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+  }
+  
+  /* Estilos para el menú de la barra de navegación */
+  .navbar-nav {
+    margin-left: auto; /* Empujar el menú a la derecha */
+    display: flex; /* Usar flexbox para el menú */
+  }
+  
+  /* Elemento del menú */
+  .nav-item {
+    margin-left: 1.5rem; /* Espacio entre elementos */
+  }
+  
+  /* Enlace del menú */
+  .nav-link {
+    color: #333; /* Color del texto del enlace */
+    text-decoration: none; /* Sin subrayado */
+    padding: 0.5rem 1rem; /* Espaciado interno del enlace */
+    border-radius: 4px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave para el hover */
+  }
+  
+  /* Efecto hover en los enlaces */
+  .nav-link:hover {
+    background-color: #e2e6ea; /* Color de fondo en hover */
+  }
+  
+  /* Estilo para el enlace activo */
+  .nav-link.active {
+    font-weight: bold; /* Negrita para el enlace activo */
+    color: #007bff; /* Color del texto activo */
+  }
+  
+  /* Estilos para el dropdown */
+  .dropdown-menu {
+    left: auto;
+    right: 0; /* Alinear el dropdown a la derecha */
+  }
+  
+  /* Estilo para el botón del toggler */
+  .navbar-toggler {
+    border: none; /* Sin borde */
+    background: transparent; /* Fondo transparente */
+  }
+  
+  /* Media queries para responsividad */
+  @media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column; 
+        width: 100%;
+        display: none;
+    }
+  
+    .navbar-nav.show {
+        display: flex; 
+    }
+  
+    .nav-item {
+        margin-left: 0; 
+        text-align: center; 
+    }
+  }
+
+  
+  /* Estilos para centrar el contenido */
+.container {
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Apilar elementos verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    justify-content: center; /* Centrar verticalmente */
+    text-align: center; /* Centrar texto dentro del contenedor */
+    margin: 20px; /* Espacio alrededor del contenedor */
+}
+
+.table {
+    margin-top: 20px; /* Espacio superior para la tabla */
+    width: 100%; /* Ocupar el 100% del ancho del contenedor */
+    max-width: 800px; /* Ancho máximo para la tabla */
+}
+
+/* Estilo opcional para el botón */
+.btn {
+    margin-top: 20px; /* Espacio superior para el botón */
+}

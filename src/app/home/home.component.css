@@ -1,0 +1,124 @@
+    /* Estilos de la barra de navegación */
+  body, 
+  html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        
+        .navbar {
+          background-color: #ffffff;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+          padding: 1rem;
+      }
+
+      .navbar-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+      }
+
+      .navbar-logo {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          color: #333;
+          font-weight: bold;
+          font-size: 1.2rem;
+      }
+
+      .navbar-logo svg {
+          width: 24px;
+          height: 24px;
+          margin-right: 0.5rem;
+      }
+
+      .navbar-links {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1rem;
+      }
+
+      .navbar-links a {
+          color: #333;
+          text-decoration: none;
+          font-size: 0.9rem;
+      }
+
+      .navbar-links a:hover {
+          color: #007bff;
+      }
+
+      .navbar-buttons {
+          display: flex;
+          gap: 0.5rem;
+          margin-top: 0.5rem;
+      }
+
+      .btn {
+          padding: 0.5rem 1rem;
+          border: none;
+          border-radius: 4px;
+          font-size: 0.9rem;
+          cursor: pointer;
+      }
+
+      .btn-outline {
+          background-color: transparent;
+          border: 1px solid #007bff;
+          color: #007bff;
+      }
+
+      .btn-primary {
+          background-color: #007bff;
+          color: white;
+      }
+
+      /* Media queries para responsividad */
+      @media (max-width: 768px) {
+          .navbar-container {
+              flex-direction: column;
+              align-items: flex-start;
+          }
+
+          .navbar-links, .navbar-buttons {
+              margin-top: 1rem;
+          }
+      }
+      /*Estilos de texto general*/
+      /* Centrar imagen */
+.centered-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%; /* Limita el ancho de la imagen */
+}
+
+/* Centrar beneficios */
+.beneficios-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left; /* Si quieres alinear los textos a la izquierda */
+}
+
+/* Limitar el tamaño del carrusel */
+.carousel-size {
+  width: 450%; /* Ajusta este valor según el tamaño deseado */
+  max-width: 800px;
+}
+/* Estilo de parrafo*/
+/* estilos.component.css */
+p {
+  font-size: 22px;
+  color: #555;
+}
+:host {
+  display: block; /* Asegúrate de que el contenedor ocupe el espacio disponible */
+  background-color: #96c3f1; /* Cambia este color según lo que desees */
+  height: 36vh; /* Asegúrate de que el componente ocupe toda la altura de la pantalla */
+  padding: 10px;
+}

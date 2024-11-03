@@ -1,0 +1,28 @@
+<div class="calendario-contenedor">
+    <div class="calendario-encabezado">
+      <button (click)="mesAnterior()">&lt;</button>
+      <h2>{{ meses[fechaActual.getMonth()] }} {{ fechaActual.getFullYear() }}</h2>
+      <button (click)="mesSiguiente()">&gt;</button>
+    </div>
+    <div class="dias-semana">
+      <div *ngFor="let dia of diasSemana" class="dia-semana">{{ dia }}</div>
+    </div>
+    <div class="calendario-grid">
+      <div *ngFor="let dia of diasCalendario" 
+           class="dia-calendario" 
+           [class.mes-actual]="dia.esDelMesActual"
+           (click)="seleccionarFecha(dia)">
+        <span class="fecha">{{ dia.fecha.getDate() }}</span>
+        <div *ngFor="let evento of dia.eventos" class="evento">
+          {{ evento.titulo }} - {{ evento.hora }}
+        </div>
+      </div>
+    </div>
+    
+    <div *ngIf="fechaSeleccionada" class="formulario-evento">
+      <h3>Agregar evento para {{ fechaSeleccionada | date:'dd/MM/yyyy' }}</h3>
+      <input [(ngModel)]="nuevoEvento.titulo" placeholder="Título del evento" />
+      <input [(ngModel)]="nuevoEvento.hora" placeholder="Hora del evento" />
+      <button (click)="agregarEvento()">Agregar Evento</button>
+    </div>
+  </div>
