@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Tarea } from '../tarea';
 import { TareaService } from '../../../shared/service/tarea.service';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterLink, RouterModule } from '@angular/router';
+import { CalendarioComponent } from '../../calendario/calendario.component';
 
 @Component({
   selector: 'app-tarea-list',
   standalone: true,
-  imports: [CommonModule,RouterModule],
+  imports: [CommonModule,RouterModule, RouterLink, CalendarioComponent],
   templateUrl: './tarea-list.component.html',
   styleUrls: ['./tarea-list.component.css']
 })
