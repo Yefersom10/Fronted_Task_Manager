@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  
+  .y-axis-labels {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+    padding-right: 15px;
+    color: #555;
+    font-size: 14px;
+    text-align: right;
+  }
+  
+  .bar-chart {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 400px;
+    width: 85%;
+    margin-left: 15px;
+  }
+  
+  .bar {
+    width: 70px;
+    background-color: rgba(75, 192, 192, 0.7);
+    border: 2px solid rgba(75, 192, 192, 1);
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 25px; /* espacio extra para la etiqueta inferior */
+  }
+  
+  .days {
+    position: absolute;
+    top: -25px; /* eleva la posición del número de días */
+    color: #555;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .label {
+    position: absolute;
+    bottom: -65px; /* baja la posición del nombre de la tarea */
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
