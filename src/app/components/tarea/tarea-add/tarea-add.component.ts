@@ -4,11 +4,12 @@ import { Tarea } from '../tarea';
 import { TareaService } from '../../../shared/service/tarea.service';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { DashboardComponent } from '../../../dashboard/dashboard.component';
 
 @Component({
   selector: 'app-tarea-add',
   standalone: true,
-  imports: [FormsModule, RouterModule,CommonModule],
+  imports: [FormsModule, RouterModule,CommonModule, DashboardComponent],
   templateUrl: './tarea-add.component.html',
   styleUrls: ['./tarea-add.component.css']
 })

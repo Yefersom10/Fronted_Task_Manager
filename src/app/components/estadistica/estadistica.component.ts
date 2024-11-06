@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { DashboardComponent } from '../../dashboard/dashboard.component';
 
 @Component({
   selector: 'app-estadistica',
   standalone: true,
-  imports: [],
+  imports: [DashboardComponent],
   templateUrl: './estadistica.component.html',
   styleUrl: './estadistica.component.css'
 })
