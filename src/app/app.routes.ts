@@ -9,6 +9,7 @@ import { TareaAddComponent } from './components/tarea/tarea-add/tarea-add.compon
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
+import { DetalleTareaComponent } from './components/detalle-tarea/detalle-tarea.component';
 
 export const routes: Routes = [
         {path:'',redirectTo:'/home',pathMatch: 'full'},
@@ -22,7 +23,8 @@ export const routes: Routes = [
         {path:'dashboard',component:DashboardComponent},
         {path:'register',component :RegisterComponent},
         {path:'login',component:LoginComponent},
-        {path: 'estadistica', component: EstadisticaComponent}
+        {path:'estadistica', component: EstadisticaComponent},
+        {path:'detalle_tarea', component: DetalleTareaComponent}
 ];
     
 

@@ -20,14 +20,15 @@ import { LoginComponent } from './auth/login/login.component';
     TareaListComponent, 
     HomeComponent,
     CalendarioComponent,
-    DetalleTareaComponent
-    ,EstadisticaComponent,
+    DetalleTareaComponent,
+    EstadisticaComponent,
     FooterComponent,
     HeaderComponent,
     TareaAddComponent,
     DashboardComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    DetalleTareaComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

@@ -21,7 +21,8 @@ interface DiaCalendario {
   styleUrl: './calendario.component.css'
 })
 export class CalendarioComponent implements OnInit {
-  fechaActual: Date = new Date(2024, 9, 1); // Octubre 2024
+  
+  fechaActual: Date = new Date();
   diasCalendario: DiaCalendario[] = [];
   diasSemana: string[] = ['DOM', 'LUN', 'MAR', 'MIÉ', 'JUE', 'VIE', 'SÁB'];
   meses: string[] = [
@@ -30,6 +31,7 @@ export class CalendarioComponent implements OnInit {
   ];
   fechaSeleccionada: Date | null = null;
   nuevoEvento: Evento = { titulo: '', hora: '' };
+  
 
   ngOnInit() {
     this.generarDiasCalendario();
