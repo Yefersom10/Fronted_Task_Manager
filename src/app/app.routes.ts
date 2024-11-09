@@ -13,6 +13,7 @@ import { DetalleTareaComponent } from './components/detalle-tarea/detalle-tarea.
 
 export const routes: Routes = [
         {path:'',redirectTo:'/home',pathMatch: 'full'},
+        {path:'dashboard', redirectTo:'/tarea/list',pathMatch: 'full'},
         {path:'header', component:HeaderComponent},
         {path:'footer', component:FooterComponent},
         {path:'home',component:HomeComponent},
