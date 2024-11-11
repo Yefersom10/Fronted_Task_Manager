@@ -1,0 +1,37 @@
+<div class="card bg-light mb-3 my-5">
+    <div class="card-header">Tareas</div>
+    <div class="card-body">
+      <h5 class="card-title">Listado Tareas</h5>
+      <div class="my-2 text-left">
+      </div>
+      <table class="table table-bordered table-striped">
+        <thead>
+            <th>Id Tarea</th>
+            <th>Nombre Tarea</th>
+            <th>Descripción</th>
+            <th>Fecha de Entrega</th>
+            <th>
+              Editar
+            </th>
+            <th>
+              Eliminar
+            </th>
+        </thead>
+        <tbody>
+        <tr *ngFor="let indice of tareas">
+                <td>{{indice.id}}</td>
+                <td>{{indice.namTarea}}</td>
+                <td>{{indice.descripcion}}</td>
+                <td>{{indice.fecha_creacion}}</td>
+                <td>
+                  <button type="button" name="editar" [routerLink]="['/tareas/form', indice.id]" class="btn btn-primary">Editar</button>
+                </td>
+                <td>
+                  <button type="button" name="eliminar" (click)="delete(indice)" class="btn btn-danger">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <app-calendario></app-calendario>

@@ -1,32 +1,21 @@
 import { Routes } from '@angular/router';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { TareaComponent } from './tarea/tarea.component';
+import { FormTareasComponent } from './tarea/tareasForm/form-tareas.component';
+import { TareaAddComponent } from './tarea-add/tarea-add.component';
+import { HeaderComponent } from './header/header.component';
+import { PrioridadTareaComponent } from './prioridad-tarea/prioridad-tarea.component';
+import { EstadisticaComponent } from './estadistica/estadistica.component';
 import { HomeComponent } from './home/home.component';
-import { TareaListComponent } from './components/tarea/tarea-list/tarea-list.component';
-import { CalendarioComponent } from './components/calendario/calendario.component';
-import { EstadisticaComponent } from './components/estadistica/estadistica.component';
-import { TareaAddComponent } from './components/tarea/tarea-add/tarea-add.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { RegisterComponent } from './auth/register/register.component';
-import { LoginComponent } from './auth/login/login.component';
-import { DetalleTareaComponent } from './components/detalle-tarea/detalle-tarea.component';
+
 
 export const routes: Routes = [
-        {path:'',redirectTo:'/home',pathMatch: 'full'},
-        {path:'dashboard', redirectTo:'/tarea/list',pathMatch: 'full'},
-        {path:'header', component:HeaderComponent},
-        {path:'footer', component:FooterComponent},
-        {path:'home',component:HomeComponent},
-        {path:'tarea/list', component:TareaListComponent},
-        {path:'calendario',component:CalendarioComponent},
-        {path:'estadistica',component:EstadisticaComponent},
-        {path:'tarea-add',component:TareaAddComponent},
-        {path:'dashboard',component:DashboardComponent},
-        {path:'register',component :RegisterComponent},
-        {path:'login',component:LoginComponent},
-        {path:'estadistica', component: EstadisticaComponent},
-        {path:'detalle_tarea', component: DetalleTareaComponent}
+    {path:'',redirectTo:'/home',pathMatch: 'full'},
+    {path:'tareas', component:TareaComponent},
+    {path:'header', component: HeaderComponent},
+    {path:'tareas/form', component:FormTareasComponent},
+    {path:'tareas/form/:id', component:FormTareasComponent},
+    {path:'tareasAdd', component: TareaAddComponent},
+    {path:'prioridadTarea', component: PrioridadTareaComponent},
+    {path:'estadistica', component: EstadisticaComponent},
+    {path:'home', component: HomeComponent}
 ];
-    
-
-

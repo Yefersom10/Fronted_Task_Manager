@@ -1,0 +1,20 @@
+<div class="container my-5">
+    <h2 class="text-center mb-4">Gráfico de Tareas</h2>
+  
+    <!-- Eje Y -->
+    <div class="y-axis-labels">
+      <div>100 días</div>
+      <div>75 días</div>
+      <div>50 días</div>
+      <div>25 días</div>
+      <div>0 días</div>
+    </div>
+  
+    <!-- Gráfico de barras -->
+    <div class="bar-chart">
+      <div *ngFor="let barra of barras" class="bar" [style.height.%]="barra.height">
+        <span class="days">{{ barra.days }} días</span>
+        <span class="label">{{ barra.name }}</span>
+      </div>
+    </div>
+</div>
