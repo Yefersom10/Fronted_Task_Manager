@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { Tarea } from '../tarea/tarea';
 import { TareasService } from '../tarea/tareas-service';
 import { CommonModule } from '@angular/common';
+import { HeaderComponent } from "../header/header.component";
 
 @Component({
   selector: 'app-prioridad-tarea',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HeaderComponent],
   templateUrl: './prioridad-tarea.component.html',
   styleUrl: './prioridad-tarea.component.css'
 })

@@ -5,11 +5,12 @@ import { Tarea } from './tarea';
 import { TareasService } from './tareas-service';
 import Swal from 'sweetalert2';
 import { CalendarioComponent } from "../calendario/calendario.component";
+import { HeaderComponent } from "../header/header.component";
 
 @Component({
   selector: 'app-tarea',
   standalone: true,
-  imports: [RouterLink, CommonModule, CalendarioComponent],
+  imports: [RouterLink, CommonModule, CalendarioComponent, HeaderComponent],
   templateUrl: './tarea.component.html',
   styleUrl: './tarea.component.css'
 })

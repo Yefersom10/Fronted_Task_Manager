@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Tarea } from '../tarea/tarea';
 import { TareasService } from '../tarea/tareas-service';
 import { CommonModule } from '@angular/common';
+import { HeaderComponent } from "../header/header.component";
 
 @Component({
   selector: 'app-estadistica',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HeaderComponent],
   templateUrl: './estadistica.component.html',
   styleUrl: './estadistica.component.css'
 })

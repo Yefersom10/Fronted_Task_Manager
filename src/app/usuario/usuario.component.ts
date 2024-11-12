@@ -4,11 +4,12 @@ import { Usuario } from './usuario';
 import { UsuarioService } from './usuario-service';
 import Swal from 'sweetalert2';
 import { RouterLink } from '@angular/router';
+import { HeaderComponent } from "../header/header.component";
 
 @Component({
   selector: 'app-usuario',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, HeaderComponent],
   templateUrl: './usuario.component.html',
   styleUrl: './usuario.component.css'
 })

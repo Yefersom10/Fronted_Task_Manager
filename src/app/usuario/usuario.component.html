@@ -1,38 +1,40 @@
+<app-header></app-header>
 <div class="card bg-light mb-3 my-5">
     <div class="card-header">Tareas</div>
     <div class="card-body">
       <h5 class="card-title">Listado Tareas</h5>
       <div class="my-2 text-left">
+        <!-- Botón Cerrar Sesión -->
+        <button type="button" class="btn btn-danger" [routerLink]="['/login']">
+          Cerrar sesión
+        </button>
       </div>
       <table class="table table-bordered table-striped">
         <thead>
-            <th>Id Usuario</th>
-            <th>Nombre Usuario</th>
-            <th>Email</th>
-            <th>Rol</th>
-            <th>Contraseña</th>
-            <th>
-              Editar
-            </th>
-            <th>
-              Eliminar
-            </th>
+          <th>Id Usuario</th>
+          <th>Nombre Usuario</th>
+          <th>Email</th>
+          <th>Rol</th>
+          <th>Contraseña</th>
+          <th>Editar</th>
+          <th>Eliminar</th>
         </thead>
         <tbody>
-        <tr *ngFor="let indice of usuarios">
-                <td>{{indice.id}}</td>
-                <td>{{indice.nomUsuario}}</td>
-                <td>{{indice.email}}</td>
-                <td>{{indice.rol}}</td>
-                <td>{{indice.contrasenia}}</td>
-                <td>
-                  <button type="button" name="editar" [routerLink]="['/usuarios/form', indice.id]" class="btn btn-primary">Editar</button>
-                </td>
-                <td>
-                  <button type="button" name="eliminar" (click)="delete(indice)" class="btn btn-danger">Eliminar</button>
-                </td>
-            </tr>
+          <tr *ngFor="let indice of usuarios">
+            <td>{{indice.id}}</td>
+            <td>{{indice.nomUsuario}}</td>
+            <td>{{indice.email}}</td>
+            <td>{{indice.rol}}</td>
+            <td>{{indice.contrasenia}}</td>
+            <td>
+              <button type="button" name="editar" [routerLink]="['/usuarios/form', indice.id]" class="btn btn-primary">Editar</button>
+            </td>
+            <td>
+              <button type="button" name="eliminar" (click)="delete(indice)" class="btn btn-danger">Eliminar</button>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
   </div>
+  
